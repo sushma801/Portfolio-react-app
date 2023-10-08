@@ -65,37 +65,21 @@ const Contact = () => {
               <TextField
                 placeholder="Full Name"
                 label="Full Name"
-                sx={{ width: "45%" }}
                 name="name"
               />
-              <TextField
-                placeholder="Email"
-                label="E-mail"
-                sx={{ width: "45%" }}
-                name="email"
-              />
+              <TextField placeholder="Email" label="E-mail" name="email" />
             </div>
 
             <div className="row-container">
-              <TextField
-                placeholder="Subject"
-                label="Subject"
-                sx={{ width: "45%" }}
-                name="subject"
-              />
-              <TextField
-                placeholder="Message"
-                label="Message"
-                sx={{ width: "45%" }}
-                name="message"
-              />
+              <TextField placeholder="Subject" label="Subject" name="subject" />
+              <TextField placeholder="Message" label="Message" name="message" />
             </div>
 
             <input type="submit" value="Send" className="flat-button" />
           </div>
         </form>
       </div>
-      <div className="flex flex-col w-1/6 ml-44">
+      <div className="flex flex-col contact-icons">
         <Tooltip title="github.com/sushma801">
           <IconButton
             onClick={() => window.open("https://github.com/sushma801")}

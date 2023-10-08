@@ -2,7 +2,11 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const StyledContact = styled.div`
-  ${tw`flex p-4 gap-x-4`};
+  ${tw`flex p-4 gap-x-4 w-full`};
+
+  .left-container {
+    ${tw`w-[80%]`}
+  }
 
   .left-container,
   .contact-details,
@@ -12,7 +16,11 @@ export const StyledContact = styled.div`
   }
 
   .row-container {
-    ${tw`flex gap-x-4`}
+    ${tw`flex flex-col gap-y-4 lg:(flex-row gap-x-4)`}
+  }
+
+  .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+    ${tw`w-full lg:(w-[45%])`}
   }
 
   h1 {
@@ -33,11 +41,15 @@ export const StyledContact = styled.div`
   }
 
   .flat-button {
+    align-self: center;
     background: #30639c;
     color: white;
     font-size: 24px;
-    align-self: center;
     border-radius: 8px;
     padding: 8px 24px;
+  }
+
+  .contact-icons {
+    ${tw`flex flex-col w-[15%]`}
   }
 `;

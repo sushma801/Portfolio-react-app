@@ -22,7 +22,7 @@ const Home = () => {
         </Link>
       </div>
 
-      <img src={avatar} width={350} alt="avatar" className="p-4" />
+      <img src={avatar} alt="avatar" className="image" />
     </StyledHome>
   );
 };

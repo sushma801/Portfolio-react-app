@@ -69,4 +69,7 @@ export const StyledHome = styled.div`
       border: 1px solid #fff;
     }
   }
+  .image {
+    ${tw`p-4 w-[190px] lg:(w-[350px]) md:(w-[300px])`}
+  }
 `;
