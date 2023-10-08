@@ -17,6 +17,7 @@ export const StyledAbout = styled.div`
     ${tw`text-cyan-800 underline`}
     font-size: 1rem;
     font-family: cursive;
+    font-weight: bold;
     padding: 8px 0;
   }
 
@@ -40,8 +41,23 @@ export const StyledAbout = styled.div`
     ${tw`flex items-center`}
   }
 
+  .icon {
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+    color: #fff;
+    border-radius: 50%;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+  }
+
+  .certification {
+    ${tw`p-4`}
+  }
+
   .web-sites {
-    ${tw`ml-2 text-cyan-800 underline font-bold`}
+    ${tw`ml-4 text-cyan-800 underline font-bold`}
   }
 
   .container {

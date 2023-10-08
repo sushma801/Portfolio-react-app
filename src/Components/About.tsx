@@ -33,15 +33,35 @@ interface IWorkType {
   describtion?: ITech[];
 }
 
+const certificationSet: IconType[] = [
+  {
+    label: "Recognize by the Organization for team Player",
+    children: <></>,
+  },
+  {
+    label: "Problem Solving",
+    children: (
+      <button
+        className="web-sites"
+        onClick={() =>
+          window.open("https://www.hackerrank.com/certificates/ad621dc9e4e2")
+        }
+      >
+        Click to see
+      </button>
+    ),
+  },
+];
+
 const otherSkillsSet: IconType[] = [
   {
     label: "Java",
     ratingValue: 3,
     children: (
       <FaJava
+        className="icon"
         style={{
-          marginRight: "1rem",
-          marginLeft: "0.5rem",
+          background: "#B5651B",
         }}
       />
     ),
@@ -60,35 +80,65 @@ const otherSkillsSet: IconType[] = [
     label: "Python",
     ratingValue: 2,
     children: (
-      <FaPython style={{ marginRight: "1rem", marginLeft: "0.5rem" }} />
+      <FaPython
+        className="icon"
+        style={{
+          background: "#F5DA57",
+          color: "#35709E",
+        }}
+      />
     ),
   },
   {
     label: "Flutter",
     ratingValue: 2,
     children: (
-      <SiFlutter style={{ marginLeft: "0.5rem", marginRight: "1rem" }} />
+      <SiFlutter
+        className="icon"
+        style={{
+          color: "#3DB0CC",
+          border: "1px solid #CACCCD",
+        }}
+      />
     ),
   },
   {
     label: "Android",
     ratingValue: 2,
     children: (
-      <AiFillAndroid style={{ marginRight: "1rem", marginLeft: "0.5rem" }} />
+      <AiFillAndroid
+        className="icon"
+        style={{
+          color: "#63B567",
+          border: "1px solid #63B567",
+        }}
+      />
     ),
   },
   {
     label: "Kotlin",
     ratingValue: 2,
     children: (
-      <TbBrandKotlin style={{ marginRight: "1rem", marginLeft: "0.5rem" }} />
+      <TbBrandKotlin
+        className="icon"
+        style={{
+          color: "#5762D9",
+          border: "1px solid #CACCCD",
+        }}
+      />
     ),
   },
   {
     label: "SQL",
     ratingValue: 2,
     children: (
-      <TbBrandMysql style={{ marginRight: "1rem", marginLeft: "0.5rem" }} />
+      <TbBrandMysql
+        className="icon"
+        style={{
+          color: "#0373B6",
+          border: "1px solid #CACCCD",
+        }}
+      />
     ),
   },
 ];
@@ -99,10 +149,10 @@ const frontEndSkillsSet: IconType[] = [
     ratingValue: 4,
     children: (
       <FaReact
+        className="icon"
         style={{
           color: "#3486eb",
-          marginRight: "1rem",
-          marginLeft: "0.5rem",
+          border: "1px solid #CACCCD",
         }}
       />
     ),
@@ -112,10 +162,10 @@ const frontEndSkillsSet: IconType[] = [
     ratingValue: 3,
     children: (
       <FaAngular
+        className="icon"
         style={{
           color: "#a11528",
-          marginRight: "1rem",
-          marginLeft: "0.5rem",
+          border: "1px solid #CACCCD",
         }}
       />
     ),
@@ -124,10 +174,10 @@ const frontEndSkillsSet: IconType[] = [
     label: "JavaScript",
     children: (
       <DiJavascript
+        className="icon"
         style={{
           color: "#EFD819",
-          marginRight: "1rem",
-          marginLeft: "0.5rem",
+          border: "1px solid #CACCCD",
         }}
       />
     ),
@@ -137,10 +187,10 @@ const frontEndSkillsSet: IconType[] = [
     label: "HTML5",
     children: (
       <AiOutlineHtml5
+        className="icon"
         style={{
           color: "#DD4B25",
-          marginRight: "1rem",
-          marginLeft: "0.5rem",
+          border: "1px solid #CACCCD",
         }}
       />
     ),
@@ -150,10 +200,10 @@ const frontEndSkillsSet: IconType[] = [
     label: "CSS3",
     children: (
       <IoLogoCss3
+        className="icon"
         style={{
           color: "#265DE6",
-          marginRight: "1rem",
-          marginLeft: "0.5rem",
+          border: "1px solid #CACCCD",
         }}
       />
     ),
@@ -163,10 +213,10 @@ const frontEndSkillsSet: IconType[] = [
     label: "React-Redux",
     children: (
       <SiRedux
+        className="icon"
         style={{
           color: "#7348B6",
-          marginRight: "1rem",
-          marginLeft: "0.5rem",
+          border: "1px solid #CACCCD",
         }}
       />
     ),
@@ -177,10 +227,10 @@ const frontEndSkillsSet: IconType[] = [
     ratingValue: 3,
     children: (
       <DiSass
+        className="icon"
         style={{
           color: "#C66493",
-          marginRight: "1rem",
-          marginLeft: "0.5rem",
+          border: "1px solid #CACCCD",
         }}
       />
     ),
@@ -190,10 +240,10 @@ const frontEndSkillsSet: IconType[] = [
     ratingValue: 4,
     children: (
       <SiTailwindcss
+        className="icon"
         style={{
           color: "#09B0CD",
-          marginRight: "1rem",
-          marginLeft: "0.5rem",
+          border: "1px solid #CACCCD",
         }}
       />
     ),
@@ -206,7 +256,8 @@ const testingSkillsSet: IconType[] = [
     ratingValue: 3,
     children: (
       <SiTestinglibrary
-        style={{ color: "#D32928", marginLeft: "0.5rem", marginRight: "1rem" }}
+        className="icon"
+        style={{ color: "#D32928", border: "1px solid #CACCCD" }}
       />
     ),
   },
@@ -215,7 +266,8 @@ const testingSkillsSet: IconType[] = [
     ratingValue: 3,
     children: (
       <SiJest
-        style={{ color: "#99425B", marginLeft: "0.5rem", marginRight: "1rem" }}
+        className="icon"
+        style={{ color: "#99425B", border: "1px solid #CACCCD" }}
       />
     ),
   },
@@ -225,21 +277,25 @@ const workDemo: IconType[] = [
   {
     label: "Youtube Clone",
     children: (
-      <a
-        href="https://candid-baklava-3e5961.netlify.app/welcome"
+      <button
+        onClick={() =>
+          window.open("https://candid-baklava-3e5961.netlify.app/welcome")
+        }
         className="web-sites"
       >
         Click here to go website
-      </a>
+      </button>
     ),
   },
   {
     label: "Portfolio",
     children: (
-      <a href="https://incredible-portfolio.netlify.app/" className="web-sites">
-        {" "}
+      <button
+        onClick={() => window.open("https://incredible-portfolio.netlify.app/")}
+        className="web-sites"
+      >
         Click here to go website
-      </a>
+      </button>
     ),
   },
 ];
@@ -312,14 +368,14 @@ const WorkContainer = ({
     <h2>Role: {keyRole}</h2>
     <div>
       <h2>Tech Stack: </h2>
-      {techStack?.map(({ label }) => (
-        <span> {label},</span>
+      {techStack?.map(({ label }, index) => (
+        <span key={`${index}-${index}`}> {label},</span>
       ))}
     </div>
     <div>
       <h2>Key Role:</h2>
       {describtion?.map(({ label }, index) => (
-        <div key={index} className="describtion">
+        <div key={`${label}-${index}`} className="describtion">
           {label}
         </div>
       ))}
@@ -363,18 +419,22 @@ const About = () => {
           <div className="skills-container">
             <div>
               <h2>Front-end Skills</h2>
-              {frontEndSkillsSet.map(({ label, children, ratingValue }) => (
-                <Icon
-                  label={label}
-                  children={children}
-                  ratingValue={ratingValue}
-                />
-              ))}
+              {frontEndSkillsSet.map(
+                ({ label, children, ratingValue }, index) => (
+                  <Icon
+                    key={`${label}-${index}`}
+                    label={label}
+                    children={children}
+                    ratingValue={ratingValue}
+                  />
+                )
+              )}
             </div>
             <div>
               <h2>Other Skills</h2>
-              {otherSkillsSet.map(({ label, children, ratingValue }) => (
+              {otherSkillsSet.map(({ label, children, ratingValue }, index) => (
                 <Icon
+                  key={`${label}-${index}`}
                   label={label}
                   children={children}
                   ratingValue={ratingValue}
@@ -383,13 +443,16 @@ const About = () => {
             </div>
             <div>
               <h2>Testing Library</h2>
-              {testingSkillsSet.map(({ label, children, ratingValue }) => (
-                <Icon
-                  label={label}
-                  children={children}
-                  ratingValue={ratingValue}
-                />
-              ))}
+              {testingSkillsSet.map(
+                ({ label, children, ratingValue }, index) => (
+                  <Icon
+                    key={`${label}-${index}`}
+                    label={label}
+                    children={children}
+                    ratingValue={ratingValue}
+                  />
+                )
+              )}
             </div>
           </div>
         </div>
@@ -397,8 +460,12 @@ const About = () => {
         <div>
           <h1>Work Demo link</h1>
           <div className="work-demo">
-            {workDemo.map(({ label, children }) => (
-              <Icon label={label} children={children} />
+            {workDemo.map(({ label, children }, index) => (
+              <Icon
+                key={`${label}-${index}`}
+                label={label}
+                children={children}
+              />
             ))}
           </div>
         </div>
@@ -407,8 +474,9 @@ const About = () => {
           <h1>Work Experience</h1>
           <div className="work-container">
             {workExperienceSet.map(
-              ({ projectName, keyRole, techStack, describtion }) => (
+              ({ projectName, keyRole, techStack, describtion }, index) => (
                 <WorkContainer
+                  key={`${projectName}-${index}`}
                   projectName={projectName}
                   keyRole={keyRole}
                   techStack={techStack}
@@ -419,7 +487,15 @@ const About = () => {
           </div>
         </div>
       </div>
-      <img src={avatar} alt="avatar" width={350} className="image" />
+      <div>
+        <img src={avatar} alt="avatar" width={350} className="image" />
+        <div className="certifications">
+          <h2>Certification: </h2>
+          {certificationSet.map(({ label, children }) => (
+            <Icon label={label} children={children} />
+          ))}
+        </div>
+      </div>
     </StyledAbout>
   );
 };
