@@ -229,17 +229,14 @@ const workDemo: IconType[] = [
         href="https://candid-baklava-3e5961.netlify.app/welcome"
         className="web-sites"
       >
-        click here to go website
+        Click here to go website
       </a>
     ),
   },
   {
     label: "Portfolio",
     children: (
-      <a
-        href="https://incredible-travesseiro-710a9b.netlify.app/"
-        className="web-sites"
-      >
+      <a href="https://incredible-portfolio.netlify.app/" className="web-sites">
         {" "}
         Click here to go website
       </a>
@@ -365,7 +362,7 @@ const About = () => {
           <h1>Skills</h1>
           <div className="skills-container">
             <div>
-              <h2>Frond-end Skills</h2>
+              <h2>Front-end Skills</h2>
               {frontEndSkillsSet.map(({ label, children, ratingValue }) => (
                 <Icon
                   label={label}

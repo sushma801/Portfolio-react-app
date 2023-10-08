@@ -5,7 +5,7 @@ import { StyledHeader } from "./Headers.styled";
 const Headers = () => {
   return (
     <StyledHeader>
-      <NavLink to="/">Portfolio.</NavLink>
+      <NavLink to="/">Portfolio</NavLink>
       <div className="rightTab">
         <NavLink to={"/"}>Home</NavLink>
         <NavLink to={"/about"}>About</NavLink>
