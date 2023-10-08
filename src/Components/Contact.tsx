@@ -6,9 +6,25 @@ import IconButton from "@mui/material/IconButton";
 import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
 import { FaHackerrank } from "react-icons/fa";
 import { SiHackerearth, SiLeetcode } from "react-icons/si";
+import { StyledContact } from "./Contact.styled";
 
 const Contact = () => {
   const formData = useRef<any>();
+
+  const handleMailClick = () => {
+    // Replace 'recipient@example.com', 'Subject', and 'Body' with your desired email details.
+    const emailAddress = "sushmashaw801@gmail.com";
+    const emailSubject = "Subject";
+    const emailBody = "Body";
+
+    // Create a mailto link with the specified parameters.
+    const mailtoLink = `mailto:${emailAddress}?subject=${encodeURIComponent(
+      emailSubject
+    )}&body=${encodeURIComponent(emailBody)}`;
+
+    // Open the user's default email client.
+    window.location.href = mailtoLink;
+  };
 
   const sendEmail = (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -32,20 +48,20 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-row ">
-      <div className="flex flex-col w-5/6">
-        <div className="text-zone">
+    <StyledContact>
+      <div className="left-container">
+        <div className="contact-details">
           <h1>Contact me</h1>
-          <p className="text-xs">
+          <span>
             I am interested in opportunities - especially on ambitious or large
             projects. However, if you have any other requests or questions,
             don't hesitate to contact me using below form either.
-          </p>
+          </span>
         </div>
-        <form className="ml-8" ref={formData} onSubmit={sendEmail}>
-          <h2 className="mt-2 mb-2">Fill the form to connect me</h2>
-          <div className="flex flex-col">
-            <div className="flex flex-row justify-between">
+        <form ref={formData} onSubmit={sendEmail}>
+          <h2>Fill the form to connect me</h2>
+          <div className="form-container">
+            <div className="row-container">
               <TextField
                 placeholder="Full Name"
                 label="Full Name"
@@ -60,7 +76,7 @@ const Contact = () => {
               />
             </div>
 
-            <div className="flex flex-row justify-between mt-4">
+            <div className="row-container">
               <TextField
                 placeholder="Subject"
                 label="Subject"
@@ -80,8 +96,10 @@ const Contact = () => {
         </form>
       </div>
       <div className="flex flex-col w-1/6 ml-44">
-        <Tooltip title="https://github.com/sushma801">
-          <IconButton>
+        <Tooltip title="github.com/sushma801">
+          <IconButton
+            onClick={() => window.open("https://github.com/sushma801")}
+          >
             <AiFillGithub
               style={{
                 color: "#181515",
@@ -90,8 +108,14 @@ const Contact = () => {
           </IconButton>
         </Tooltip>
 
-        <Tooltip title="https://www.linkedin.com/in/sushma-kumari-shaw-5b384817a/">
-          <IconButton>
+        <Tooltip title="sushma-kumari-shaw-5b384817a/">
+          <IconButton
+            onClick={() =>
+              window.open(
+                "https://www.linkedin.com/in/sushma-kumari-shaw-5b384817a/"
+              )
+            }
+          >
             <AiFillLinkedin
               style={{
                 color: "#0177B5",
@@ -101,7 +125,8 @@ const Contact = () => {
         </Tooltip>
 
         <Tooltip title="sushmashaw801@gmail.com">
-          <IconButton>
+          {/* window.open("https://mail.google.com/mail/") */}
+          <IconButton onClick={handleMailClick}>
             <AiOutlineMail
               style={{
                 color: "#DE5347",
@@ -111,7 +136,11 @@ const Contact = () => {
         </Tooltip>
 
         <Tooltip title="hackerrank.com/sushmashaw801">
-          <IconButton>
+          <IconButton
+            onClick={() =>
+              window.open("https://www.hackerrank.com/sushmashaw801")
+            }
+          >
             <FaHackerrank
               style={{
                 color: "#2DB85D",
@@ -121,7 +150,11 @@ const Contact = () => {
         </Tooltip>
 
         <Tooltip title="hackerearth.com/@sushmakumari3">
-          <IconButton>
+          <IconButton
+            onClick={() =>
+              window.open("https://www.hackerearth.com/@sushmakumari3")
+            }
+          >
             <SiHackerearth
               style={{
                 color: "#2B3150",
@@ -131,7 +164,9 @@ const Contact = () => {
         </Tooltip>
 
         <Tooltip title="leetcode.com/sushma801/">
-          <IconButton>
+          <IconButton
+            onClick={() => window.open("https://leetcode.com/sushma801/")}
+          >
             <SiLeetcode
               style={{
                 color: "#E39E3D",
@@ -140,7 +175,7 @@ const Contact = () => {
           </IconButton>
         </Tooltip>
       </div>
-    </div>
+    </StyledContact>
   );
 };
 
