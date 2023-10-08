@@ -491,8 +491,8 @@ const About = () => {
         <img src={avatar} alt="avatar" width={350} className="image" />
         <div className="certifications">
           <h2>Certification: </h2>
-          {certificationSet.map(({ label, children }) => (
-            <Icon label={label} children={children} />
+          {certificationSet.map(({ label, children }, index) => (
+            <Icon key={`${label}-${index}`} label={label} children={children} />
           ))}
         </div>
       </div>

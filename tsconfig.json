@@ -5,7 +5,7 @@
     "rootDir": "./src",
     "target": "es5",
     "lib": ["es2015", "es2016", "es2017", "dom", "dom.iterable", "esnext"],
-    "allowJs": false,
+    "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

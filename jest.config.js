@@ -7,11 +7,6 @@ module.exports = {
     coverageReporters: ['text'],
     coverageDirectory: 'coverage',
     testEnvironment: 'jsdom',
-    transform: {
-        // ... other transform options
-        '\\.(js|jsx|ts|tsx)$': 'babel-jest',
-        '^.+\\.jsx?$': 'babel-jest',
-      },
     globals: {
         'ts-jest': {
             babelConfig: true,
