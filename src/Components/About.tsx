@@ -396,7 +396,7 @@ const About = () => {
 
         <div>
           <h1>Work Demo link</h1>
-          <div className="skills-container">
+          <div className="work-demo">
             {workDemo.map(({ label, children }) => (
               <Icon label={label} children={children} />
             ))}

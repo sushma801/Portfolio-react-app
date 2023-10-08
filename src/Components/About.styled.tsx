@@ -5,7 +5,7 @@ export const StyledAbout = styled.div`
   ${tw`flex p-4 justify-between`}
 
   .about-container {
-    ${tw`flex flex-col gap-y-2 w-3/5`}
+    ${tw`flex flex-col gap-y-2 w-[70%]`}
   }
 
   h1 {
@@ -24,11 +24,15 @@ export const StyledAbout = styled.div`
     font-family: cursive;
   }
 
+  .work-demo {
+    ${tw`flex flex-col p-4`}
+  }
+
   .skills-container {
     ${tw`flex flex-wrap`}
 
     > div {
-      ${tw`p-4 w-[40%]`}
+      ${tw`p-4 w-[250px]`}
     }
   }
 
