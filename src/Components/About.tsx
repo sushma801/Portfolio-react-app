@@ -233,6 +233,18 @@ const workDemo: IconType[] = [
       </a>
     ),
   },
+  {
+    label: "Portfolio",
+    children: (
+      <a
+        href="https://incredible-travesseiro-710a9b.netlify.app/"
+        className="web-sites"
+      >
+        {" "}
+        Click here to go website
+      </a>
+    ),
+  },
 ];
 
 const workExperienceSet: IWorkType[] = [
@@ -410,7 +422,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <img src={avatar} alt="avatar" className="image" />
+      <img src={avatar} alt="avatar" width={350} className="image" />
     </StyledAbout>
   );
 };

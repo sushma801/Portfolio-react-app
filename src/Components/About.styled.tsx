@@ -2,7 +2,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const StyledAbout = styled.div`
-  ${tw`flex p-4 gap-x-2`}
+  ${tw`flex p-4 justify-between`}
 
   .about-container {
     ${tw`flex flex-col gap-y-2 w-3/5`}
@@ -51,8 +51,7 @@ export const StyledAbout = styled.div`
   }
 
   .image {
-    width: 400px;
-    height: 400px;
     padding: 1rem;
+    height: 350px;
   }
 `;
