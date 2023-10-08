@@ -1,0 +1,13 @@
+{
+  "plugins": [
+    "babel-plugin-macros",
+    "babel-plugin-styled-components",
+    [
+      "twin.macro",
+      {
+        "config": "tailwind.config.js",
+        "preset": "styled-components"
+      }
+    ]
+  ]
+}
