@@ -19,25 +19,12 @@ export const StyledContact = styled.div`
     ${tw`flex flex-col gap-y-4 lg:(flex-row gap-x-4)`}
   }
 
+  h2 {
+    ${tw`flex items-center gap-x-2`}
+  }
+
   .css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
     ${tw`w-full lg:(w-[45%])`}
-  }
-
-  h1 {
-    ${tw`text-cyan-800`}
-    font-size: 1.5rem;
-    font-family: cursive;
-  }
-
-  h2 {
-    ${tw`text-cyan-800 underline`}
-    font-size: 1rem;
-    font-family: cursive;
-    padding: 8px 0;
-  }
-
-  span {
-    font-family: cursive;
   }
 
   .flat-button {

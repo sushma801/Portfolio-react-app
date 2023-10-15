@@ -21,8 +21,9 @@ const Home = () => {
           Contact Me
         </Link>
       </div>
-
-      <img src={avatar} alt="avatar" className="image" />
+      <div>
+        <img src={avatar} alt="avatar" className="image" />
+      </div>
     </StyledHome>
   );
 };

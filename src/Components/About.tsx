@@ -26,13 +26,6 @@ interface ITech {
   keyTechOrDescription?: string;
 }
 
-interface IWorkType {
-  projectName?: string;
-  keyRole?: string;
-  techStack?: ITech[];
-  describtion?: ITech[];
-}
-
 const certificationSet: IconType[] = [
   {
     label: "Recognize by the Organization for team Player",
@@ -279,7 +272,7 @@ const workDemo: IconType[] = [
     children: (
       <button
         onClick={() =>
-          window.open("https://candid-baklava-3e5961.netlify.app/welcome")
+          window.open("https://youtube-clone-by-s.netlify.app/welcome")
         }
         className="web-sites"
       >
@@ -294,94 +287,11 @@ const workDemo: IconType[] = [
         onClick={() => window.open("https://incredible-portfolio.netlify.app/")}
         className="web-sites"
       >
-        Click here to go website
+        Click here to go home
       </button>
     ),
   },
 ];
-
-const workExperienceSet: IWorkType[] = [
-  {
-    projectName: "Great Minds Affirm In-sync",
-    keyRole: "Front-end Developer",
-    techStack: [
-      { label: "React", keyTechOrDescription: "React" },
-      { label: "Tailwind CSS", keyTechOrDescription: "Tailwind CSS" },
-      { label: "React Context API", keyTechOrDescription: "React Context API" },
-      { label: "TypeScript", keyTechOrDescription: "TypeScript" },
-      { label: "Styled-components", keyTechOrDescription: "Styled-components" },
-    ],
-    describtion: [
-      { label: "Implementing functionality using React with TypeScript" },
-      {
-        label: "Develop Reusable Components",
-      },
-      {
-        label: "Writing Unit Testing Using React Testing Library",
-      },
-      {
-        label: "Work on fixing bugs",
-      },
-      {
-        label: "Helping team members and being a team Player.",
-      },
-    ],
-  },
-  {
-    projectName: "Rockwell Automation",
-    keyRole: "Front-end Developer",
-    techStack: [
-      { label: "React", keyTechOrDescription: "React" },
-      { label: "Material UI", keyTechOrDescription: "Material UI" },
-      { label: "React Redux", keyTechOrDescription: "React Redux" },
-      { label: "TypeScript", keyTechOrDescription: "TypeScript" },
-      { label: "React-Form-Hook", keyTechOrDescription: "React-Form-Hokk" },
-      { label: "Thunk (Middleware)", keyTechOrDescription: "Thunk" },
-    ],
-    describtion: [
-      { label: "Design and Develop UI using React with TypeScript and Redux" },
-      {
-        label:
-          "Implement reusable Input fields to maintain similarity on the UI end",
-      },
-      {
-        label:
-          "Implement API Integration via Redux, using middleware Thunk, and display data in Front-End",
-      },
-      { label: "Work on bug-fixing" },
-      {
-        label:
-          "Helping my fellow colleagues to debug their code to resolve unwanted errors",
-      },
-    ],
-  },
-];
-
-const WorkContainer = ({
-  projectName,
-  keyRole,
-  techStack,
-  describtion,
-}: IWorkType) => (
-  <div className="container" key={projectName} aria-label={projectName}>
-    <h2>Project Name: {projectName}</h2>
-    <h2>Role: {keyRole}</h2>
-    <div>
-      <h2>Tech Stack: </h2>
-      {techStack?.map(({ label }, index) => (
-        <span key={`${index}-${index}`}> {label},</span>
-      ))}
-    </div>
-    <div>
-      <h2>Key Role:</h2>
-      {describtion?.map(({ label }, index) => (
-        <div key={`${label}-${index}`} className="describtion">
-          {label}
-        </div>
-      ))}
-    </div>
-  </div>
-);
 
 const Icon = ({ label, children, ratingValue }: IconType) => {
   return (
@@ -405,7 +315,7 @@ const About = () => {
         <div className="about-data">
           <h1>About me</h1>
           <span>
-            I'm very ambitious fron-end developer looking for a role in
+            I'm very ambitious front-end developer looking for a role in
             established IT company with the opportunity to work with the latest
             technologies on challenging and diverse projects.
           </span>
@@ -467,23 +377,6 @@ const About = () => {
                 children={children}
               />
             ))}
-          </div>
-        </div>
-
-        <div>
-          <h1>Work Experience</h1>
-          <div className="work-container">
-            {workExperienceSet.map(
-              ({ projectName, keyRole, techStack, describtion }, index) => (
-                <WorkContainer
-                  key={`${projectName}-${index}`}
-                  projectName={projectName}
-                  keyRole={keyRole}
-                  techStack={techStack}
-                  describtion={describtion}
-                />
-              )
-            )}
           </div>
         </div>
       </div>

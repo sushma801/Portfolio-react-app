@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { AiFillHome } from "react-icons/ai";
 import { BsFillInfoCircleFill } from "react-icons/bs";
-import { BiSolidContact } from "react-icons/bi";
+import { BiSolidContact, BiShoppingBag } from "react-icons/bi";
 import { StyledHeader } from "./Headers.styled";
 
 const Headers = () => {
@@ -43,6 +43,9 @@ const Headers = () => {
           ) : (
             "Contact Me"
           )}
+        </NavLink>
+        <NavLink to={"/experience"}>
+          {isSmallScreen ? <BiShoppingBag className="header-icon" /> : "Work"}
         </NavLink>
       </div>
     </StyledHeader>

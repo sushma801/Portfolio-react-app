@@ -3,7 +3,12 @@ import TextField from "@mui/material/TextField";
 import emailjs from "@emailjs/browser";
 import Tooltip from "@mui/material/Tooltip";
 import IconButton from "@mui/material/IconButton";
-import { AiFillGithub, AiFillLinkedin, AiOutlineMail } from "react-icons/ai";
+import {
+  AiFillGithub,
+  AiFillLinkedin,
+  AiOutlineMail,
+  AiFillWarning,
+} from "react-icons/ai";
 import { FaHackerrank } from "react-icons/fa";
 import { SiHackerearth, SiLeetcode } from "react-icons/si";
 import { StyledContact } from "./Contact.styled";
@@ -58,8 +63,17 @@ const Contact = () => {
             don't hesitate to contact me using below form either.
           </span>
         </div>
+        <h2>
+          <AiFillWarning
+            style={{
+              color: "#e08e36",
+            }}
+          />
+          Form section is under-construction, to connect me please use
+          email/linkedIn icon
+        </h2>
         <form ref={formData} onSubmit={sendEmail}>
-          <h2>Fill the form to connect me</h2>
+          <h3>Fill the form to connect me</h3>
           <div className="form-container">
             <div className="row-container">
               <TextField

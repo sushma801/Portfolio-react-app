@@ -5,7 +5,7 @@ export const StyledAbout = styled.div`
   ${tw`flex p-4 justify-between`}
 
   .about-container {
-    ${tw`flex flex-col gap-y-2 w-[70%]`}
+    ${tw`flex flex-col gap-y-2 w-[50%] lg:(w-[70%])`}
   }
 
   h1 {
@@ -62,12 +62,6 @@ export const StyledAbout = styled.div`
 
   .container {
     ${tw`p-4`}
-  }
-
-  .describtion {
-    font-family: emoji;
-    word-wrap: break-word;
-    word-spacing: 8px;
   }
 
   .image {

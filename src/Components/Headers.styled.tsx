@@ -18,6 +18,6 @@ export const StyledHeader = styled.div`
   }
 
   .rightTab {
-    ${tw`flex flex-row w-2/6 justify-between`}
+    ${tw`flex flex-row w-2/5 justify-between`}
   }
 `;
