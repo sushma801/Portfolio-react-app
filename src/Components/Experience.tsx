@@ -105,11 +105,13 @@ const WorkContainer = ({
     </div>
     <div>
       <h3>Key Role:</h3>
-      {describtion?.map(({ label }, index) => (
-        <div key={`${label}-${index}`} className="describtion">
-          {label}
-        </div>
-      ))}
+      <ul>
+        {describtion?.map(({ label }, index) => (
+          <li key={`${label}-${index}`} className="describtion">
+            {label}
+          </li>
+        ))}
+      </ul>
     </div>
   </div>
 );

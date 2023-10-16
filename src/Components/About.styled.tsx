@@ -60,10 +60,6 @@ export const StyledAbout = styled.div`
     ${tw`ml-4 text-cyan-800 underline font-bold`}
   }
 
-  .container {
-    ${tw`p-4`}
-  }
-
   .image {
     padding: 1rem;
     height: 350px;

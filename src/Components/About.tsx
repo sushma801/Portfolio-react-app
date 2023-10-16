@@ -21,23 +21,44 @@ interface IconType {
   ratingValue?: number;
 }
 
-interface ITech {
-  label?: string;
-  keyTechOrDescription?: string;
-}
-
 const certificationSet: IconType[] = [
   {
     label: "Recognize by the Organization for team Player",
     children: <></>,
   },
   {
-    label: "Problem Solving",
+    label: "Problem Solving (Basic)",
     children: (
       <button
         className="web-sites"
         onClick={() =>
           window.open("https://www.hackerrank.com/certificates/ad621dc9e4e2")
+        }
+      >
+        Click to see
+      </button>
+    ),
+  },
+  {
+    label: "React (Basic)",
+    children: (
+      <button
+        className="web-sites"
+        onClick={() =>
+          window.open("https://www.hackerrank.com/certificates/6cafce99e9e4")
+        }
+      >
+        Click to see
+      </button>
+    ),
+  },
+  {
+    label: "Java (Basic)",
+    children: (
+      <button
+        className="web-sites"
+        onClick={() =>
+          window.open("https://www.hackerrank.com/certificates/073dec1b9219")
         }
       >
         Click to see

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import tw from "twin.macro";
 
 export const StyledExperience = styled.div`
-  ${tw`flex p-4 flex-col`}
+  ${tw` p-4 `}
 
   .work-container {
     ${tw`px-4`}
@@ -14,7 +14,11 @@ export const StyledExperience = styled.div`
     word-spacing: 8px;
   }
 
-  span {
-    font-family: cursive;
+  .container {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #155e75;
+    padding: 12px 0;
   }
 `;
