@@ -19,6 +19,7 @@ interface IconType {
   label: string;
   children: ReactNode;
   ratingValue?: number;
+  openLink?: () => void;
 }
 
 const certificationSet: IconType[] = [
@@ -46,6 +47,36 @@ const certificationSet: IconType[] = [
         className="web-sites"
         onClick={() =>
           window.open("https://www.hackerrank.com/certificates/6cafce99e9e4")
+        }
+      >
+        Click to see
+      </button>
+    ),
+  },
+  {
+    label: "React Testing Library",
+    children: (
+      <button
+        className="web-sites"
+        onClick={() =>
+          window.open(
+            "https://udemy-certificate.s3.amazonaws.com/image/UC-34d16ff7-431f-42b6-84c2-fd160a8d2ea7.jpg"
+          )
+        }
+      >
+        Click to see
+      </button>
+    ),
+  },
+  {
+    label: "Tailwind CSS",
+    children: (
+      <button
+        className="web-sites"
+        onClick={() =>
+          window.open(
+            "https://udemy-certificate.s3.amazonaws.com/image/UC-e613d91b-c686-4895-9b60-dc51db26384c.jpg"
+          )
         }
       >
         Click to see
