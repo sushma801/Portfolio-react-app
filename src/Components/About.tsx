@@ -28,13 +28,21 @@ const About = () => {
           <h1>Skills</h1>
           <div className="skills-container">
             {SkillSets.map(({ label, skillList }, index) => (
-              <SkillList label={label} skillList={skillList} key={index} />
+              <SkillList
+                label={label}
+                skillList={skillList}
+                key={`${label}-${index}`}
+              />
             ))}
           </div>
         </div>
 
-        {WorkDemoList.map(({ label, skillList }) => (
-          <SkillList label={label} skillList={skillList} />
+        {WorkDemoList.map(({ label, skillList }, index) => (
+          <SkillList
+            label={label}
+            skillList={skillList}
+            key={`${label}-${index}`}
+          />
         ))}
       </div>
       <div>
