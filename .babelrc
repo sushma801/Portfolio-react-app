@@ -1,0 +1,15 @@
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": [
+    "babel-plugin-twin.macro",
+    "babel-plugin-macros",
+    "babel-plugin-styled-components",
+    [
+      "twin.macro",
+      {
+        "config": "tailwind.config.js",
+        "preset": "styled-components"
+      }
+    ]
+  ]
+}
